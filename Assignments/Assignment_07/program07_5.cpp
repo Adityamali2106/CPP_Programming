@@ -1,0 +1,73 @@
+//////////////////////////////////////////////////////////////////////////
+//
+//	Required Header Files
+//
+//////////////////////////////////////////////////////////////////////////
+#include<iostream>
+using std :: cout;
+using std :: cin;
+using std :: endl;
+
+
+class PatternPrinting
+{
+public:
+	//////////////////////////////////////////////////////////////////////////
+	//
+	//  Function Name : Display
+	//  Discription :   It is used to print first 5 multiplies of the given number
+	//  Input :         Integer
+	//  Output :        void
+	//  Author :        Aditya Mali
+	//  Date :          12/12/2025
+	//
+	//////////////////////////////////////////////////////////////////////////
+
+	void Display(int iNo)
+	{
+		int iCnt = 0;
+		if (iNo < 0)
+		{
+			iNo = -iNo;
+		}
+
+		for (iCnt = 1; iCnt <= 5; iCnt++)
+		{
+			cout<<(iNo * iCnt)<<"\t";
+		}
+		cout<<endl;
+	}	// End of Display
+
+		// O(N)
+};
+
+//////////////////////////////////////////////////////////////////////////
+//
+//	Entery point Function for the application
+//
+//////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+	int iValue = 0;
+	PatternPrinting pobj;
+
+	cout<<"Enter number : "<<endl;
+	cin>>iValue;
+
+	pobj.Display(iValue);
+	
+	return 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+//
+//	Input : 10				
+//  Output: 
+//			10       20       30       40       50
+//  Input : 5				
+//  Output: 
+//			5        10       15       20       25
+//	Input : 0 				Output: 
+//
+//////////////////////////////////////////////////////////////////////////////////////
